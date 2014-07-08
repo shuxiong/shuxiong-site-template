@@ -1,0 +1,37 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{{ site.description }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/{{ site.syntax }}.css" type="text/css" />
+
+    <!-- MathJax CSS -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js">
+        MathJax.Hub.Config({
+            extensions: ["tex2jax.js"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: true
+            },
+            "HTML-CSS": { availableFonts: ["STIX","TeX"] }
+        });
+        MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+            var TEX = MathJax.InputJax.TeX;
+                TEX.Macro("RR","{\\mathbb{R}}");
+                TEX.Macro("Im","{\\mathrm{Im}}");
+                TEX.Macro("rar","{\\rightarrow}");
+                TEX.Macro("rAr","{\\Rightarrow}");
+                TEX.Macro("sprod","\\langle {#1}, {#2} \\rangle",2);
+        });
+   </script>
+
+</head>

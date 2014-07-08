@@ -1,0 +1,18 @@
+# Site settings
+author: Your name here #TODO
+title: Your awesome title #TODO
+email: your-email@domain.com #TODO
+
+description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." #TODO
+
+baseurl: "/baseurl" #TODO
+url: "http://yourdomain.com" #TODO
+
+#twitter_username: jekyllrb
+#github_username:  jekyll
+
+syntax: monokai
+
+# Build settings
+markdown: kramdown
+permalink: pretty
